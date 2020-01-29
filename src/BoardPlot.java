@@ -19,7 +19,7 @@ public class BoardPlot implements Plot{
     }
 
     @Override
-    public Plot getPlotTo(Direction direction) {
+    public BoardPlot getPlotTo(Direction direction) {
         // throw new UnsupportedOperationException();
         switch (direction){
             case NORD:
