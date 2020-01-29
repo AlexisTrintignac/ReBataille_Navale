@@ -23,15 +23,23 @@ public class BoardPlot implements Plot{
         // throw new UnsupportedOperationException();
         switch (direction){
             case NORD:
-                return new BoardPlot(this.abscisse + 1, this.ordonnee);
-            case SUD:
                 return new BoardPlot(this.abscisse - 1, this.ordonnee);
+            case SUD:
+                return new BoardPlot(this.abscisse + 1, this.ordonnee);
             case EST:
-                return new BoardPlot(this.abscisse, this.ordonnee + 1);
-            case OUEST:
                 return new BoardPlot(this.abscisse, this.ordonnee - 1);
+            case OUEST:
+                return new BoardPlot(this.abscisse, this.ordonnee + 1);
             default:
                 return new BoardPlot(0,0);
         }
+    }
+
+    @Override
+    public String toString() {
+        return "BoardPlot{" +
+                "abscisse=" + abscisse +
+                ", ordonnee=" + ordonnee +
+                '}';
     }
 }
