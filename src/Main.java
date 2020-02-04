@@ -11,5 +11,12 @@ public class Main {
         j1.ajouterBateaux(Torpilleur1);
         j2.ajouterBateaux(Porte_Avion2);
         j2.ajouterBateaux(Torpilleur2);
+        System.out.println(Porte_Avion1.afficherPosition());
+        //doit retourner true
+        Boolean isOnPlot = Porte_Avion1.isOnPlot(new BoardPlot(5,3));
+        System.out.println(isOnPlot);
+        //doit retourner false
+        Boolean isOnPlotFalse = Porte_Avion1.isOnPlot(new BoardPlot(5,6));
+        System.out.println(isOnPlotFalse);
     }
 }

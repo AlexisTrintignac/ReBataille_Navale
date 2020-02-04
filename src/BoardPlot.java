@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class BoardPlot implements Plot{
 
     private int abscisse;
@@ -16,6 +18,20 @@ public class BoardPlot implements Plot{
     @Override
     public int getOrdonnee() {
         return this.ordonnee;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BoardPlot boardPlot = (BoardPlot) o;
+        return abscisse == boardPlot.abscisse &&
+                ordonnee == boardPlot.ordonnee;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(abscisse, ordonnee);
     }
 
     @Override
